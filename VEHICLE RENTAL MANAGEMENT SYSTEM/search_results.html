@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Rental Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .vehicle-type {
+            width: 30%;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .vehicle-type h3 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .vehicle-item {
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .vehicle-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .vehicle-item h4 {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .vehicle-item p {
+            text-align: center;
+            font-size: 16px;
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .vehicle-item button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #FFA500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .vehicle-item button:hover {
+            background-color: #FF7500;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Additional Styles */
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .total-cost {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+    <script>
+        function calculateCost(price, elementId) {
+            // Get the number of days entered by the user
+            var daysInput = document.getElementById(elementId);
+            var numberOfDays = parseInt(daysInput.value);
+
+            // Calculate the total cost and display it
+            var costContainer = document.getElementById(elementId + "-cost");
+            var totalCost = price * numberOfDays;
+            costContainer.innerHTML = "Total Cost: $" + totalCost;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Vehicle Rental Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="vehicle-type">
+            <h3>Mini Cars</h3>
+            <!-- Mini Car 1 -->
+            <div class="vehicle-item">
+                <img src="TT.jpg" alt="TATA TIAGO">
+                <h4>TATA TIAGO</h4>
+                <p>Price per Day: $40</p>
+                <label for="tt-days-input">Enter Number of Days:</label>
+                <input type="number" id="tt-days-input" placeholder="Enter days">
+                <button onclick="calculateCost(40, 'tt-days-input')">Calculate Cost</button>
+                <div id="tt-days-input-cost" class="total-cost"></div>
+                <a href="paymentprocess.html"><button>BOOK NOW</button></a>
+            </div>
+            <!-- Mini Car 2 -->
+            <div class="vehicle-item">
+                <img src="MA.jpg" alt="MARUTI ALTO">
+                <h4>MARUTI ALTO</h4>
+                <p>Price per Day: $40</p>
+                <label for="ma-days-input">Enter Number of Days:</label>
+                <input type="number" id="ma-days-input" placeholder="Enter days">
+                <button onclick="calculateCost(40, 'ma-days-input')">Calculate Cost</button>
+                <div id="ma-days-input-cost" class="total-cost"></div>
+                <a href="paymentprocess.html"><button>BOOK NOW</button></a>
+            </div>
+            <!-- Mini Car 3 -->
+            <div class="vehicle-item">
+                <img src="FF.jpg" alt="FORD FIGO">
+                <h4>FORD FIGO</h4>
+                <p>Price per Day: $40</p>
+                <label for="ff-days-input">Enter Number of Days:</label>
+                <input type="number" id="ff-days-input" placeholder="Enter days">
+                <button onclick="calculateCost(40, 'ff-days-input')">Calculate Cost</button>
+                <div id="ff-days-input-cost" class="total-cost"></div>
+                <a href="paymentprocess.html"><button>BOOK NOW</button></a>
+            </div>
+        </div>
+
+        <div class="vehicle-type">
+            <h3>Standard Cars</h3>
+            <!-- Standard Car 1 -->
+            <div class="vehicle-item">
+                <img src="FC.jpg" alt="FORD C MAX">
+                <h4>FORD C MAX</h4>
+                <p>Price per Day: $65</p>
+                <label for="fc-days-input">Enter Number of Days:</label>
+                <input type="number" id="fc-days-input" placeholder="Enter days">
+                <button onclick="calculateCost(65, 'fc-days-input')">Calculate Cost</button>
+                <div id="fc-days-input-cost" class="total-cost"></div>
+                <a href="paymentprocess.html"><button>BOOK NOW</button></a>
+            </div>
+            <!-- Standard Car 2 -->
+            <div class="vehicle-item">
+                <img src="vw.jpg" alt="VOLKSWAGAN PASSAT">
+                <h4>VOLKSWAGAN PASSAT</h4>
+                <p>Price per Day: $65</p>
+                <label for="vw-days-input">Enter Number of Days:</label>
+                <input type="number" id="vw-days-input" placeholder="Enter days">
+                <button onclick="calculateCost(65, 'vw-days-input')">Calculate Cost</button>
+                <div id="vw-days-input-cost" class="total-cost"></div>
+                <a href="paymentprocess.html"><button>BOOK NOW</button></a>
+            </div>
+            <!-- Standard Car 3 -->
+            <div class="vehicle-item">
+                <img src="RL.jpg" alt="RENAULT LAGUNA">
+                <h4>RENAULT LAGUNA</h4>
+                <p>Price per Day: $65</p>
+                <label for="RL-days-input">Enter Number of Days:</label>
+                <input type="number" id="RL-days-input" placeholder="Enter days">
+                <button onclick="calculateCost(65, 'RL-days-input')">Calculate Cost</button>
+                <div id="RL-days-input-cost" class="total-cost"></div>
+                <a href="paymentprocess.html"><button>BOOK NOW</button></a>
+            </div>
+        </div>
+
+        <div class="vehicle-type">
+            <h3>Prime Cars</h3>
+            <!-- Prime Car 1 -->
+            <div class="vehicle-item">
+                <img src="MD.jpg" alt="MARUTI DZIRE">
+                <h4>MARUTI DZIRE</h4>
+                <p>Price per Day: $80</p>
+                <label for="MD-days-input">Enter Number of Days:</label>
+                <input type="number" id="MD-days-input" placeholder="Enter days">
+                <button onclick="calculateCost(80, 'MD-days-input')">Calculate Cost</button>
+                <div id="MD-days-input-cost" class="total-cost"></div>
+                <a href="paymentprocess.html"><button>BOOK NOW</button></a>
+            </div>
+            <!-- Prime Car 2 -->
+            <div class="vehicle-item">
+                <img src="TE.jpg" alt="TOYOTA ETIOS">
+                <h4>TOYOTA ETIOS</h4>
+                <p>Price per Day: $80</p>
+                <label for="TE-days-input">Enter Number of Days:</label>
+                <input type="number" id="TE-days-input" placeholder="Enter days">
+                <button onclick="calculateCost(80, 'TE-days-input')">Calculate Cost</button>
+                <div id="TE-days-input-cost" class="total-cost"></div>
+                <a href="paymentprocess.html"><button>BOOK NOW</button></a>
+            </div>
+            <!-- Prime Car 3 -->
+            <div class="vehicle-item">
+                <img src="TI.jpg" alt="TOYOTA INDIGO">
+                <h4>TOYOTA INDIGO</h4>
+                <p>Price per Day: $80</p>
+                <label for="TI-days-input">Enter Number of Days:</label>
+                <input type="number" id="TI-days-input" placeholder="Enter days">
+                <button onclick="calculateCost(80, 'TI-days-input')">Calculate Cost</button>
+                <div id="TI-days-input-cost" class="total-cost"></div>
+                <a href="paymentprocess.html"><button>BOOK NOW</button></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2023 Vehicle Rental Management System
+    </footer>
+</body>
+</html>
+
+       
+
+
+

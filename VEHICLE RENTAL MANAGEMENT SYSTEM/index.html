@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Rental Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            
+            background-image: url('bg.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-position: center center; 
+        }
+
+        .search-form {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .search-form label {
+            color: black;
+        }
+
+        .search-form input,
+        .search-form select,
+        .search-form button {
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+        }
+
+        header, nav, main, footer {
+            text-align: center;
+            color: #FFA500; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px; 
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            max-width: 600px;
+            margin: 10px auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            margin-right: 20px; 
+
+        main {
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 10px;
+            margin: 10px; 
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vehicle Rental Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><button>Home</button></a></li>
+            <li><a href="vehicles.html"><button>Vehicles</button></a></li>
+          
+            <li><a href="contactus.html"><button>Contactus</button></a></li>
+            <li><a href="Aboutus"><button>Aboutus</button></a></li>
+        </ul>
+    </nav>
+    
+    </nav>
+    <main>
+        <div class="search-form">
+            <h2>Search Vehicle Rentals</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+    
+            <label for="vehicle">Vehicle:</label>
+            <select id="vehicle" name="vehicle" required>
+                <option value="car">Car</option>
+                
+            
+            </select><br>
+    
+            <label for="pickup-date">Pickup Date:</label>
+            <input type="date" id="pickup-date" name="pickup-date" required><br>
+    
+            <label for="return-date">Return Date:</label>
+            <input type="date" id="return-date" name="return-date" required><br>
+    
+            
+        <a href="search_results.html" type="search">Select</button>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Rental Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .vehicle-type {
+            width: 30%;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .vehicle-type h3 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .vehicle-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .vehicle-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .vehicle-item h4 {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .vehicle-item p {
+            text-align: center;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .vehicle-item button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #FFA500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .vehicle-item button:hover {
+            background-color: #FF7500;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vehicle Rental Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="vehicle-type">
+            <h3>Mini Cars</h3>
+            <div class="vehicle-item">
+                <img src="TT.jpg" alt="Mini Car 1">
+                <h4>TATA TIAGO</h4>
+                <p>Price per Day: 4000</p>
+                
+            </div>
+            <div class="vehicle-item">
+                <img src="MA.jpg" alt="Mini Car 2">
+                <h4>MARUTI ALTO</h4>
+                <p>Price per Day: 4000</p>
+                
+            </div>
+            <div class="vehicle-item">
+                <img src="FF.jpg" alt="Mini Car 3">
+                <h4>FORD FIGO</h4>
+                <p>Price per Day: 4000</p>
+              
+            </div>
+        </div>
+
+        <div class="vehicle-type">
+            <h3>Standard Cars</h3>
+            <div class="vehicle-item">
+                <img src="FC.jpg" alt="Standard Car 1">
+                <h4>FORD C MAX</h4>
+                <p>Price per Day: 6500</p>
+               
+            </div>
+            <div class="vehicle-item">
+                <img src="vw.jpg" alt="Standard Car 2">
+                <h4>VOLKSWAGAN PASSAT</h4>
+                <p>Price per Day: 6500</p>
+               
+            </div>
+            <div class="vehicle-item">
+                <img src="RL.jpg" alt="Standard Car 3">
+                <h4>RENAULT LAGUNA</h4>
+                <p>Price per Day: 6500</p>
+               
+            </div>
+        </div>
+
+        <div class="vehicle-type">
+            <h3>Prime Cars</h3>
+            <div class="vehicle-item">
+                <img src="MD.jpg" alt="Prime Car 1">
+                <h4>MARUTI DZIRE</h4>
+                <p>Price per Day: 10000</p>
+                
+            </div>
+            <div class="vehicle-item">
+                <img src="TE.jpg" alt="Prime Car 2">
+                <h4>TOYOTA ETIOS</h4>
+                <p>Price per Day: 10000</p>
+                
+            </div>
+            <div class="vehicle-item">
+                <img src="TI.jpg" alt="Prime Car 3">
+                <h4>TATA INDIGO</h4>
+                <p>Price per Day: 10000</p>
+              
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2023 Vehicle Rental Management System
+    </footer>
+</body>
+</html>
